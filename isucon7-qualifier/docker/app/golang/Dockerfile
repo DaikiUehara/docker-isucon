@@ -1,11 +1,11 @@
-FROM golang:1.9
+FROM golang:1.16.4
 
 ARG GIT_URL=https://github.com/isucon/isucon7-qualify.git
 
 RUN git clone $GIT_URL /home/isucon/isubata
-WORKDIR /home/isucon/isubata/webapp/go
+WORKDIR /home/isucon/isubata/webapp/go/isubata
 RUN make
 
 EXPOSE 5000
 
-ENTRYPOINT ["/home/isucon/isubata/webapp/go/isubata"]
+ENTRYPOINT ["/home/isucon/isubata/webapp/go/isubata/isubata"]
