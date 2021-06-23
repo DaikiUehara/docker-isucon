@@ -1,4 +1,4 @@
-FROM alpine AS build-dev
+FROM alpine:3.12 AS build-dev
 
 ARG GIT_URL=https://github.com/isucon/isucon7-qualify.git
 

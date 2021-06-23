@@ -4,7 +4,7 @@ services:
     build:
       context: ./docker/bench
       args:
-        GIT_URL: https://github.com/DaikiUehara/isucon7-qualify
+        GIT_URL: https://github.com/kayamin/isucon7-qualify
     image: isucon7-qualifier-bench
     depends_on:
       - web
@@ -14,7 +14,7 @@ services:
     build:
       context: ./docker/web
       args:
-        GIT_URL: https://github.com/DaikiUehara/isucon7-qualify
+        GIT_URL: https://github.com/kayamin/isucon7-qualify
     image: isucon7-qualifier-web:nginx
     networks:
       - frontend
@@ -31,7 +31,7 @@ services:
       # context: ./docker/app/python
       #context: ./docker/app/ruby
       args:
-        GIT_URL: https://github.com/DaikiUehara/isucon7-qualify
+        GIT_URL: https://github.com/kayamin/isucon7-qualify
     image: isucon7-qualifier-app:golang
     #image: isucon7-qualifier-app:nodejs
     #image: isucon7-qualifier-app:perl
@@ -52,7 +52,7 @@ services:
     build:
       context: ./docker/db
       args:
-        GIT_URL: https://github.com/DaikiUehara/isucon7-qualify
+        GIT_URL: https://github.com/kayamin/isucon7-qualify
     image: isucon7-qualifier-db
     ports:
       - "3306"
